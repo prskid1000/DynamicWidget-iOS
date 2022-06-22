@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hmP-AG-qS1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="clf-Ct-jvG">
+            <objects>
+                <tabBarController useStoryboardIdentifierAsRestorationIdentifier="YES" id="hmP-AG-qS1" customClass="TabBarController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Czb-Oj-2Yk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sp6-Nv-3cA" kind="relationship" relationship="viewControllers" id="8dr-2O-FLd"/>
+                        <segue destination="ygX-Ad-gsW" kind="relationship" relationship="viewControllers" id="cMC-jE-2Xa"/>
+                        <segue destination="Y92-Fs-DCe" kind="relationship" relationship="viewControllers" id="nIq-8z-PKz"/>
+                        <segue destination="tD6-ml-dpR" kind="relationship" relationship="viewControllers" id="Kws-cJ-wBt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftb-5U-Xnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="256"/>
+        </scene>
+        <!--Jobs-->
+        <scene sceneID="QSq-da-3hM">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="sp6-Nv-3cA" customClass="JobsTabController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jobs" image="briefcase" catalog="system" id="nZO-2I-bDI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P3l-ZC-myx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Fo-t0-qKi" kind="relationship" relationship="rootViewController" id="VgI-Gm-7Ik"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYw-hN-ICj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="973"/>
+        </scene>
+        <!--My Applies-->
+        <scene sceneID="Xld-Zs-kfh">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="ygX-Ad-gsW" customClass="MyAppliesTabController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Applies" image="doc" catalog="system" id="IU7-An-Wvd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7C4-1F-DRc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qPf-Ps-fv8" kind="relationship" relationship="rootViewController" id="oV0-VU-uRe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Daa-Z5-W9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="973"/>
+        </scene>
+        <!--Inbox-->
+        <scene sceneID="NTg-kJ-n8C">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y92-Fs-DCe" customClass="InboxTabController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inbox" image="mail" catalog="system" id="LT7-pk-7g8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qZU-Qb-uoi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WP1-8c-uvh" kind="relationship" relationship="rootViewController" id="4kY-f3-0Eq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MT-Ta-Bkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="973"/>
+        </scene>
+        <!--Jobs View Controller-->
+        <scene sceneID="m2i-oD-RkD">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Fo-t0-qKi" customClass="JobsViewController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="PCJ-kQ-DMa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KZ2-G2-oxh">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZ2-G2-oxh" id="Lhd-kU-2fY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Fo-t0-qKi" id="ILM-7a-Bex"/>
+                            <outlet property="delegate" destination="6Fo-t0-qKi" id="dal-ez-ILu"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="R18-XI-Jka">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.dash" catalog="system" id="NoY-fu-UA9">
+                            <connections>
+                                <action selector="sideMenuAction" destination="6Fo-t0-qKi" id="dla-gS-F2P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHf-X2-4As" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="1645"/>
+        </scene>
+        <!--My Applies View Controller-->
+        <scene sceneID="zJm-2v-AIF">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="qPf-Ps-fv8" customClass="MyAppliesViewController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oXI-Bk-j6a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IWS-Zp-HY5">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IWS-Zp-HY5" id="9dA-bl-Y8v">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qPf-Ps-fv8" id="hq9-gn-sQf"/>
+                            <outlet property="delegate" destination="qPf-Ps-fv8" id="tGq-Un-NXU"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="4Go-4V-6l2">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.dash" catalog="system" id="zEo-ua-VTC">
+                            <connections>
+                                <action selector="sideMenuAction" destination="qPf-Ps-fv8" id="VdF-h2-wlE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAt-NP-HJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="1645"/>
+        </scene>
+        <!--Inbox View Controller-->
+        <scene sceneID="rpm-oH-q2T">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="WP1-8c-uvh" customClass="InboxViewController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Oko-cy-Skk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4X3-zd-mfa">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4X3-zd-mfa" id="1UP-5G-sU4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WP1-8c-uvh" id="WRA-fe-hul"/>
+                            <outlet property="delegate" destination="WP1-8c-uvh" id="FJf-3I-9VW"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="20X-zW-l2P">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.dash" catalog="system" id="SRM-B7-rcx">
+                            <connections>
+                                <action selector="sideMenuAction" destination="WP1-8c-uvh" id="UH5-at-Eq3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-BK-OUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="1645"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="3Ga-Vf-Cjz">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="82I-bS-2Ye" customClass="ProfileViewController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="w3I-0r-yrA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="q1N-Nt-j3p">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1N-Nt-j3p" id="UwA-fR-yBU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="82I-bS-2Ye" id="i6c-ej-Ue1"/>
+                            <outlet property="delegate" destination="82I-bS-2Ye" id="4g7-fT-76D"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rPh-Bv-LQV">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.dash" catalog="system" id="p6t-Jp-JIq">
+                            <connections>
+                                <action selector="sideMenuAction" destination="82I-bS-2Ye" id="e5b-3C-LSg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3r6-4e-e9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="1645"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="jyh-n9-KvI">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="tD6-ml-dpR" customClass="ProfileTabController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="PpG-Y4-7dR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ofJ-2N-TNu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="82I-bS-2Ye" kind="relationship" relationship="rootViewController" id="dyy-pW-P6M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHK-jG-nou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="973"/>
+        </scene>
+        <!--Side View Controller-->
+        <scene sceneID="QMl-Z1-D5K">
+            <objects>
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gwx-A4-WEi" customClass="SideViewController" customModule="DynamicWidgetDemo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="60L-Zd-N9J">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jWV-pq-j7R">
+                                <rect key="frame" x="0.0" y="44.5" width="288" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jWV-pq-j7R" id="mpT-YK-7dA">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gwx-A4-WEi" id="GNa-Ec-DaW"/>
+                            <outlet property="delegate" destination="Gwx-A4-WEi" id="xCa-m8-clY"/>
+                        </connections>
+                    </tableView>
+                    <size key="freeformSize" width="288" height="896"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXd-Xh-DjB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="256"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="briefcase" catalog="system" width="128" height="105"/>
+        <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

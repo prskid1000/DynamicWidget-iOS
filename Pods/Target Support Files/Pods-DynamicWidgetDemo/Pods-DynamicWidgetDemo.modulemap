@@ -1,0 +1,6 @@
+framework module Pods_DynamicWidgetDemo {
+  umbrella header "Pods-DynamicWidgetDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
